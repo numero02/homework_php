@@ -1,11 +1,45 @@
 <?php
+
+    function palindrome(String $str){
+        $pal = str_split($str);
+        $i=0;
+        $k=count($pal)-1;
+        $verify = true;
+        while($verify && ($i < count($pal)) && ($k >= 0)){
+            if($pal[$i] == $pal[$k]){
+                $verify = true;
+                $i++;
+                $k--;
+            }else{
+                $verify = false;
+            }
+        }
+        return $verify;
+    }
+    var_dump(palindrome("ollo"));
+
+
+
+    function checkString(String $str){
+
+        $new_str = str_split($str);
+
+        foreach($new_str as $key => $value){
+           
+            if(!ctype_lower($value)){
+                return false;
+            }
+        }
+        return true;
+    }
+    
     function sortArray(array $table){
         sort($table);
         return $table;
     }
-    echo "<pre>";
-    var_dump(sortArray(array(19,55,11,6,3,8,28)));
-    echo "</pre>";
+    // echo "<pre>";
+    // var_dump(sortArray(array(19,55,11,6,3,8,28)));
+    // echo "</pre>";
       
     function reverseString(String $str){
 
