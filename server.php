@@ -92,22 +92,22 @@ function computeClosestToZero(array $ts){
 
 
 
-function computeClosestToZero(array $ts) {
-    $minimum=0;
+// function computeClosestToZero(array $ts) {
+//     $minimum=0;
 
-    if(sizeof($ts) == 0){
-        return false;
-    }else{
-        for($i=0;$i<sizeOf($ts);$i++){
-            if($minimum == 0){
-                $minimum = $ts[$i];
-            }else if(abs($minimum) > abs($ts[$i])){
-                $minimum = $ts[$i];
-            }
-        }
-        return $minimum;
-    }
-}
+//     if(sizeof($ts) == 0){
+//         return false;
+//     }else{
+//         for($i=0;$i<sizeOf($ts);$i++){
+//             if($minimum == 0){
+//                 $minimum = $ts[$i];
+//             }else if(abs($minimum) > abs($ts[$i])){
+//                 $minimum = $ts[$i];
+//             }
+//         }
+//         return $minimum;
+//     }
+// }
 
 function findTheSmallestWords(array $list){
     $word = null;
@@ -122,37 +122,37 @@ function findTheSmallestWords(array $list){
 }
 
 
-function computeClosestToZero(array $ts) {
-    // Write your code here
-    // To debug (equivalent to var_dump): error_log(var_export($var, true));
-    $pos=[];
-    $neg=[];
-    foreach($ts as $t){
-      if($t > 0 ){
-        array_push($pos,$t);
-      }
-    }
-    foreach($ts as $t){
-      if($t < 0 ){
-        array_push($neg,$t);
-      }
-    }
-    echo "<pre>";
-    var_dump($pos);
-    var_dump($neg);
-    echo "</pre>";
-    $res_max=min($pos);
-    $res_min=max($neg);
+// function computeClosestToZero(array $ts) {
+//     // Write your code here
+//     // To debug (equivalent to var_dump): error_log(var_export($var, true));
+//     $pos=[];
+//     $neg=[];
+//     foreach($ts as $t){
+//       if($t > 0 ){
+//         array_push($pos,$t);
+//       }
+//     }
+//     foreach($ts as $t){
+//       if($t < 0 ){
+//         array_push($neg,$t);
+//       }
+//     }
+//     echo "<pre>";
+//     var_dump($pos);
+//     var_dump($neg);
+//     echo "</pre>";
+//     $res_max=min($pos);
+//     $res_min=max($neg);
 
-    if(abs($res_min) < $res_max){
-        echo "I am here";
-      return $res_min;
-    }else if(abs($res_min) > $res_max){
-      return $res_max;
-    }else if(abs($res_min) == $res_max){
-      return $res_min;
-    }
-  }
+//     if(abs($res_min) < $res_max){
+//         echo "I am here";
+//       return $res_min;
+//     }else if(abs($res_min) > $res_max){
+//       return $res_max;
+//     }else if(abs($res_min) == $res_max){
+//       return $res_min;
+//     }
+//   }
   
 
 
