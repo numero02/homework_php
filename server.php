@@ -1,5 +1,12 @@
 <?php
-
+    function sortArray(array $table){
+        sort($table);
+        return $table;
+    }
+    echo "<pre>";
+    var_dump(sortArray(array(19,55,11,6,3,8,28)));
+    echo "</pre>";
+      
     function reverseString(String $str){
 
         $rev = str_split($str);
@@ -10,9 +17,9 @@
        return $reverse_word;
     }       
     
-    echo "<pre>";
-        var_dump(reverseString("massilia"));
-    echo "</pre>";
+    // echo "<pre>";
+    //     var_dump(reverseString("massilia"));
+    // echo "</pre>";
 
 
     function checkPrime(int $number){
